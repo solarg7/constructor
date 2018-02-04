@@ -1,0 +1,22 @@
+{
+  "name": "constructor",
+  "version": "1.0.0",
+  "description": "constructor exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solarg7/constructor.git"
+  },
+  "author": "solarg7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solarg7/constructor/issues"
+  },
+  "homepage": "https://github.com/solarg7/constructor#readme",
+  "dependencies": {
+    "inquire": "^0.4.8"
+  }
+}
