@@ -1,47 +1,42 @@
-var inquirer = require("inquirer");
+//console.log("paolita");
 
-function Programmer(letterInput){
+var Letter = function (savedLetter){
 
-    this.letterInput = letterInput;
+    this.letterValue = savedLetter;
+    var letra = "_";
+    //this.hasBeenGuessed = false; colocar en word.js
 
     // this.printInfo = function(){
-    //     console.log("Letra: " + this.letterInput);
-    //};
+    //      console.log("Letra: " + this.letterInput + "value: " + value + hasBeenGuessed+ "reultado: " + letra);
+    // };
+
+    this.displayValue = function(){
+        
+         if (this.hasBeenGuessed){
+            
+             letra = this.letterValue;
+
+             return letra
+             //console.log(value);  
+         }
+         else{
+             return "_"
+             //console.log("_");
+         };
+    };
+    this.checkGuess = function(letterGuessed){
+         if (letterGuessed == this.letterValue){
+             this.hasBeenGuessed = true;
+         }
+         
+    };
+
 }
 
-inquirer.prompt([
-    {
-        type: "input",
-        name: "letterInput",
-        message: "Ingrese Letra"
-    }
-]).then(function(answers){
-    
-    var letterGuessed = new Programmer(answers.letterInput);
-    
-    //letterGuessed.printInfo();
-});
 
 
+module.exports =Letter;
 
-console.log(letterGuessed);
 
-var letter ={
-    value: "c",
-    hasBeenGuessed: false,
-    displayValue: function(){
-        if (hasBeenGuessed){
-            return value
-        }
-        else{
-            return "_"
-        };
-    },
-    checkGuess: function(letterGuessed){
-        if (letterGuessed == value){
-            hasBeenGuessed = true;
-        }
-    }
-};
 
 
