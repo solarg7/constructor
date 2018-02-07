@@ -1,39 +1,45 @@
 //console.log("paolita");
 var Letter = require("./letter.js");
 
+
 //var inquirer = require("inquirer");
 
 
 var Guess = function (searchWord){
-    
+    this.hasBeenGuessed = false;
+    this.wordGuessed = [];
+    console.log("hola1");
     for(i=0; i< searchWord.length; i++){
-        this.wordGuessed[i] = "_";
+        this.wordGuessed.push("_");
+        
     }
-}
+};
 
 
 var Word = function(searchWord, letterGuessed){    
-    
+    console.log("hola2");
     //this.wordGuessed = [];
-    this.searchWord = searchWord;
-
+    this.searchWord1 = searchWord;
     
-    for(i=0; i< searchWord.length; i++){
-        var savedLetter = searchWord[i];
     
-        var letterAux = new Letter(savedLetter);
+    // for(i=0; i< searchWord.length; i++){
+    //     var savedLetter = searchWord[i];
+        
+    
+    //     var letterAux = new Letter(savedLetter);
 
-        letterAux.checkGuess(letterGuessed);
+    //     letterAux.checkGuess(letterGuessed);
 
-        if (letterAux.checkGuess(letterGuessed)){
-            this.wordGuessed[i] = letterAux.displayValue();
-        }
+    //     if (letterAux.checkGuess(letterGuessed)){
+    //         this.wordGuessed[i] = letterAux.displayValue();
+    //     }
 
-    };
+    // };
    
 };
 
 module.exports = Word;
+module.exports = Guess;
 
 //console.log(letterGuessed);
 

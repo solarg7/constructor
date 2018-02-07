@@ -1,64 +1,70 @@
 //console.log("paolita");
 var inquirer = require("inquirer");
 var Word = require("./word.js");
+var Guess = require("./word.js");
 
 
-function Programmer(letterInput1){
+// function Programmer(letterInput1){
 
-    this.letterInput = letterInput1;
+//     this.letterInput = letterInput1;
 
-    this.printInfo = function(){
-         console.log("Letra: " + this.letterInput + "value: " + value + hasBeenGuessed+ "reultado: " + letra);
-    };
+//     this.printInfo = function(){
+//          console.log("Letra: " + this.letterInput + "value: " + value + hasBeenGuessed+ "reultado: " + letra);
+//     };
 
 
-    var value= "c";
-    var letra = "_";
-    var hasBeenGuessed= false;
-    displayValue = function(){
+//     var value= "c";
+//     var letra = "_";
+//     var hasBeenGuessed= false;
+//     displayValue = function(){
         
-         if (hasBeenGuessed){
+//          if (hasBeenGuessed){
             
-             letra = value;
+//              letra = value;
 
-             //return letra
-             //console.log(value);  
-         }
-         else{
+//              //return letra
+//              //console.log(value);  
+//          }
+//          else{
              
-             //console.log("_");
-         };
-    };
-    this.checkGuess = function(){
-         if (this.letterInput == value){
-             hasBeenGuessed = true;
-         }
-         displayValue();
-    };
+//              //console.log("_");
+//          };
+//     };
+//     this.checkGuess = function(){
+//          if (this.letterInput == value){
+//              hasBeenGuessed = true;
+//          }
+//          displayValue();
+//     };
 
 
 
 
-}
+// }
 
 inquirer.prompt([
     {
         type: "input",
-        name: "letterGuessed",
+        name: "letterGuessed1",
         message: "Ingrese Letra"
         
     }
     
 ]).then(function(answers){
 
-    searchWord = ["c", "o", "d", "e"];
+    var searchWord = ["c", "o", "d", "e"];
 
-    letterGuessed = answers.letterGuessed;
+    var letterGuessed = answers.letterGuessed1;
+    
+    var playWord = new Guess(searchWord);
+    
+    
+    console.log(playWord.wordGuessed + "flag01");
+
 
     var playWord = new Word(searchWord, letterGuessed);
 
-    console.log(playWord.wordGuessed);
+    console.log(playWord.wordGuessed + letterGuessed);
   
 });
 
-module.exports = Word;
