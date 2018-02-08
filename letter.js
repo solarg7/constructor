@@ -2,9 +2,11 @@
 
 var Letter = function (savedLetter){
 
+    console.log("flag05");
+
     this.letterValue = savedLetter;
     var letra = "_";
-    //this.hasBeenGuessed = false; colocar en word.js
+    this.hasBeenGuessed = false; 
 
     // this.printInfo = function(){
     //      console.log("Letra: " + this.letterInput + "value: " + value + hasBeenGuessed+ "reultado: " + letra);
@@ -27,6 +29,10 @@ var Letter = function (savedLetter){
     this.checkGuess = function(letterGuessed){
          if (letterGuessed == this.letterValue){
              this.hasBeenGuessed = true;
+             return true
+         }
+         else{
+             return false
          }
          
     };
