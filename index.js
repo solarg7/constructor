@@ -38,9 +38,9 @@ function startGame() {
         if(playWord.guessLetter(letterGuessed)){
             console.log("CORRECT LETTER");
 
-            console.log("palabra " + wordRandom.length);
+            //console.log("palabra " + wordRandom.length);
           
-            console.log(playWord.showCounter);
+            //console.log(playWord.showCounter);
            
             if(playWord.showCounter === wordRandom.length){
                console.log("WINNER!!");
@@ -63,7 +63,7 @@ function startGame() {
             //startGame();
         };
 
-        console.log("este" + playWord.showWord(letterGuessed));
+        console.log("Word??: " + playWord.showWord(letterGuessed));
 
         // for (i = 0; i < wordRandom.length;i++){
         //     if (playWord.searchWord1[i] != "_"){

@@ -17,7 +17,7 @@ var Letter = require("./letter.js");
 
 
 var Word = function(searchWord){    
-    console.log("hola2");
+    //console.log("hola2");
     //this.wordGuessed = [];
     this.searchWord1 = searchWord;
 

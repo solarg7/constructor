@@ -2,7 +2,7 @@
 
 var Letter = function (savedLetter){
 
-    console.log("flag05");
+    //console.log("flag05");
 
     this.letterValue = savedLetter;
     var letra = "_";
